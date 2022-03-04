@@ -24,10 +24,17 @@
 
 from flask import Flask, render_template, url_for
 
+
 instagramAPP = Flask(__name__)
+
+#Once you access the page on http://127.0.0.1:5000/, the page loads then
+#You are prompted your instagram username and password.
+#Then the download begins.
+#Once the download completes a message from the rendered index.html is displayed showing that download is complete.
 
 @instagramAPP.route("/")
 def home():
+    import instagramAutomation
     return render_template("index.html")
 
 if __name__ == "__main__":

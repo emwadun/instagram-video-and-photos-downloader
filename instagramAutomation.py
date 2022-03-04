@@ -95,27 +95,33 @@ def downloadImages():
     driver.implicitly_wait(20)
     driver.close()
 
-#ORDER OF EXECUTION
-#1:
-launchInstragramInBrowser()
 
-#2:
-instagramLogin()
+def instagramAutoMainFunction():
+    #ORDER OF EXECUTION
+    #1:
+    launchInstragramInBrowser()
 
-#3:
-turnOffInstagramNotificitations()
+    #2:
+    instagramLogin()
 
-#4:
-searchInstagramAccount()
+    #3:
+    turnOffInstagramNotificitations()
 
-#5:
-clickOnFirstSearchResult()
+    #4:
+    searchInstagramAccount()
 
-#6:
-findAndPrintImages()
+    #5:
+    clickOnFirstSearchResult()
 
-#7:
-createDirectory()
+    #6:
+    findAndPrintImages()
 
-#8:
-downloadImages()
+    #7:
+    createDirectory()
+
+    #8:
+    downloadImages()
+
+
+#Here we now call the main function that wraps all the 8 functions. We can call it in Flask now !
+instagramAutoMainFunction()
